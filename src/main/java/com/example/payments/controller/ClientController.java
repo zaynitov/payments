@@ -2,9 +2,7 @@
 package com.example.payments.controller;
 
 import com.example.payments.domain.Client;
-import com.example.payments.domain.Session;
 import com.example.payments.service.ClientService;
-import com.example.payments.service.SessionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.session.SessionRegistry;
@@ -39,11 +37,6 @@ public class ClientController {
     @GetMapping("/showusers")
     public List<Client> showUsers() {
         return clientService.getAllClients();
-    }
-
-    @GetMapping("/showsessions")
-    public List<Session> showSessions() {
-        return sessionService.showAll();
     }
 }
 */

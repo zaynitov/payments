@@ -22,7 +22,5 @@ public class Client {
     private String roles;
     private BigDecimal account = BigDecimal.valueOf(8);
     @OneToMany
-    private Set<Session> sessions;
-    @OneToMany
     private Set<PaymentAudit> paymentAudits;
 }

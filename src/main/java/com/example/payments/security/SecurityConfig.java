@@ -1,9 +1,5 @@
 package com.example.payments.security;
 
-import com.example.payments.service.BlackListTokensService;
-import com.example.payments.service.BruteForceFraudDetectService;
-import com.example.payments.service.ClientService;
-import com.example.payments.service.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,11 +25,6 @@ import static org.springframework.http.HttpMethod.GET;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserDetailsService userDetailsService;
     private final PasswordEncoder passwordEncoder;
-    private final SessionService sessionService;
-    private final ClientService clientService;
-    private final BruteForceFraudDetectService bruteForceFraudDetectService;
-    private final InvalidateTokenLogoutHandler logoutHandler;
-    private final BlackListTokensService blackListTokensService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
