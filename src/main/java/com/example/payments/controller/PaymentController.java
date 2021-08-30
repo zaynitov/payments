@@ -24,7 +24,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-public class PaymentControllerController {
+public class PaymentController {
     private final PaymentService paymentService;
     private final PaymentAuditService paymentAuditService;
 
@@ -43,7 +43,7 @@ public class PaymentControllerController {
     }
 
     @GetMapping("/showtrans")
-    public List<PaymentAudit> showUsers() {
+    public List<PaymentAudit> showTrans() {
         return paymentAuditService.showAll();
     }
 
